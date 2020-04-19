@@ -10,7 +10,7 @@ def tomates(): #--------------------------------------------- ventana para las p
     vtom.resizable(False, False)
     vtom.iconbitmap(r'images/descarga_gMJ_icon.ico ')
 
-    Label(vtom, text="TIPO DE PLAGA ", bg="LightGreen").pack()
+    Label(vtom, text="TIPO DE PLAGA").pack()
     Label(vtom, text="").pack()
     Button(vtom, text="plaga 1", width=10, height=1,command=op).pack()
     Label(vtom, text="").pack()
@@ -21,24 +21,23 @@ def tomates(): #--------------------------------------------- ventana para las p
     vtom.mainloop()
 
 def pimientos(): #--------------------------------------------- venatana para las plagas del pimiento
-    global ventana_pimiento
-    ventana_pimiento = Toplevel(root)
-    ventana_pimiento.title("PIMIENTO")
-    ventana_pimiento.geometry("130x200+480+200")
-    ventana_pimiento.iconbitmap(r'images/descarga_gMJ_icon.ico ')
+    vpim = Toplevel(root)
+    vpim.title("PIMIENTO")
+    vpim.geometry("130x200+480+200")
+    vpim.iconbitmap(r'images/descarga_gMJ_icon.ico ')
 
-    Label(ventana_pimiento, text="TIPO DE PLAGA").pack()
-    Label(ventana_pimiento, text="").pack()
-    Button(ventana_pimiento, text="plaga 1", width=10, height=1,command=op).pack()
-    Label(ventana_pimiento, text="").pack()
-    Button(ventana_pimiento, text="plaga 2", width=10, height=1,command=op).pack()
-    Label(ventana_pimiento, text="").pack()
-    Button(ventana_pimiento, text="plaga 3", width=10, height=1,command=op).pack()
+    Label(vpim, text="TIPO DE PLAGA").pack()
+    Label(vpim, text="").pack()
+    Button(vpim, text="plaga 1", width=10, height=1,command=op).pack()
+    Label(vpim, text="").pack()
+    Button(vpim, text="plaga 2", width=10, height=1,command=op).pack()
+    Label(vpim, text="").pack()
+    Button(vpim, text="plaga 3", width=10, height=1,command=op).pack()
 
-def op(): #--------------------------------------------- ventana de pesticida de plaga 1
+def op(): #--------------------------------------------- ventana de pesticida
     plaga= Toplevel(root)
     plaga.title("PESTICIDA")
-    plaga.geometry("380x250+480+200")
+    plaga.geometry("180x250+480+200")
     plaga.iconbitmap(r'images/descarga_gMJ_icon.ico ')
 
     Label(plaga, text="TIPO DE PESTICIDA").pack()
@@ -57,7 +56,6 @@ def data(): #--------------------------------------------ventana de la calculado
     def comp(): #--------------------------------------------- ventana del proceso de los datos ingresados
         r.set(float(ab.get())/float(ds.get()))
 
-    root.destroy()
     vent=Tk()
     vent.title('CALCULAR CANTIDAD DE PESTICIDA')
     vent.geometry("500x350+480+200")
@@ -73,16 +71,16 @@ def data(): #--------------------------------------------ventana de la calculado
         
 
     texto=("@Tomvargas")
-    Label(vent,text=texto,bg=bgcolor,fg='#B5E61D').place(x=300,y=10)
-    Label(vent,text="Medidor De Pesticida",bg=bgcolor, fg='#B5E61D', font = 'bold').place(x=20,y=9)
+    Label(vent,text=texto,bg=bgcolor,fg='#34404b').place(x=300,y=10)
+    Label(vent,text="Medidor De Pesticida",bg=bgcolor, fg='#34404b', font = 'bold').place(x=20,y=9)
     n=80
 
-    Label(vent, text='Ingresar los valores actuales',bg=bgcolor,fg='#B5E61D').place(x=20,y=70)
+    Label(vent, text='Ingresar los valores actuales',bg=bgcolor,fg='#34404b').place(x=20,y=70)
 
-    Label(vent,text="Distancia de surco (ab)",bg=bgcolor).place(x=20 , y=20+n )
+    Label(vent,text="Distancia de surco (ab)",bg=bgcolor,fg='#34404b').place(x=20 , y=20+n )
     Entry(vent,textvariable=ab).place(x=20 , y=20*2+n )
 
-    Label(vent,text="Ancho de banda  (bs)",bg=bgcolor).place(x=20 , y=20*3+n )
+    Label(vent,text="Ancho de banda  (bs)",bg=bgcolor,fg='#34404b').place(x=20 , y=20*3+n )
     Entry(vent,textvariable=ds).place(x=20 , y=20*4+n )
 
     r=StringVar()#resultado(pesticida)
