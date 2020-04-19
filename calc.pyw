@@ -1,13 +1,12 @@
 from tkinter import *
 from tkinter import ttk
-from tkinter import messagebox
+from tkhtmlview import HTMLLabel
 import os
-import webbrowser
 
 def tomates(): #--------------------------------------------- ventana para las plagas del tomate
     vtom = Toplevel(root)
     vtom.title("PLAGA")
-    vtom.geometry("380x250")
+    vtom.geometry("130x200+480+200")
     vtom.resizable(False, False)
     vtom.iconbitmap(r'images/descarga_gMJ_icon.ico ')
 
@@ -24,7 +23,7 @@ def tomates(): #--------------------------------------------- ventana para las p
 def opcion1(): #--------------------------------------------- ventana de pesticida de plaga 1
     ventana_plaga1= Toplevel(root)
     ventana_plaga1.title("PESTICIDA")
-    ventana_plaga1.geometry("380x250")
+    ventana_plaga1.geometry("380x250+480+200")
     ventana_plaga1.iconbitmap(r'images/descarga_gMJ_icon.ico ')
 
     Label(ventana_plaga1, text="Seleccione el tipo de pesticida: ", bg="LightGreen").pack()
@@ -39,7 +38,7 @@ def opcion1(): #--------------------------------------------- ventana de pestici
 def opcion2(): #--------------------------------------------- ventana de pesticida de plaga 2
     ventana_plaga2= Toplevel(root)
     ventana_plaga2.title("PESTICIDA")
-    ventana_plaga2.geometry("380x250")
+    ventana_plaga2.geometry("380x250+480+200")
     ventana_plaga2.iconbitmap(r'images/descarga_gMJ_icon.ico ')
 
     Label(ventana_plaga2, text="Seleccione el tipo de pesticida: ", bg="LightGreen").pack()
@@ -54,7 +53,7 @@ def opcion2(): #--------------------------------------------- ventana de pestici
 def opcion3(): #--------------------------------------------- ventana de pesticida de plaga 3
     ventana_plaga3= Toplevel(root)
     ventana_plaga3.title("PESTICIDA")
-    ventana_plaga3.geometry("380x250")
+    ventana_plaga3.geometry("380x250+480+200")
     ventana_plaga3.iconbitmap(r'images/descarga_gMJ_icon.ico ')
 
     Label(ventana_plaga3, text="Seleccione el tipo de pesticida: ", bg="LightGreen").pack()
@@ -70,7 +69,7 @@ def datos1(): #--------------------------------------------ventana de la calcula
     root.destroy()
     vent=Tk()
     vent.title('Calculadora Para Pesticida')
-    vent.geometry("500x350")
+    vent.geometry("500x350+480+200")
     vent.configure(background='#B5E61D')
     vent.iconbitmap(r'images/descarga_gMJ_icon.ico ')
     vent.resizable(False, False)#-----------------Bloquear redimencion de la ventana
@@ -115,7 +114,7 @@ def pimientos(): #--------------------------------------------- venatana para la
     global ventana_pimiento
     ventana_pimiento = Toplevel(root)
     ventana_pimiento.title("Selececciones el tipo de plaga")
-    ventana_pimiento.geometry("380x250")
+    ventana_pimiento.geometry("130x200+480+200")
     ventana_pimiento.iconbitmap(r'images/descarga_gMJ_icon.ico ')
 
     Label(ventana_pimiento, text="Seleccione el tipo de plaga: ", bg="LightGreen").pack()
@@ -129,7 +128,7 @@ def pimientos(): #--------------------------------------------- venatana para la
 def opcion4(): #--------------------------------------------- ventana de pesticida de plaga 1
     ventana_plaga4= Toplevel(root)
     ventana_plaga4.title("Selececciones el tipo de plaga")
-    ventana_plaga4.geometry("380x250")
+    ventana_plaga4.geometry("380x250+480+200")
     ventana_plaga4.iconbitmap(r'images/descarga_gMJ_icon.ico ')
 
 
@@ -145,7 +144,7 @@ def opcion4(): #--------------------------------------------- ventana de pestici
 def opcion5(): #--------------------------------------------- ventana de pesticida de plaga 2
     ventana_plaga4= Toplevel(root)
     ventana_plaga4.title("Selececciones el tipo de plaga")
-    ventana_plaga4.geometry("380x250")
+    ventana_plaga4.geometry("380x250+480+200")
     ventana_plaga4.iconbitmap(r'images/descarga_gMJ_icon.ico ')
 
 
@@ -161,7 +160,7 @@ def opcion5(): #--------------------------------------------- ventana de pestici
 def opcion6(): #--------------------------------------------- ventana de pesticida de plaga 3
     ventana_plaga4= Toplevel(root)
     ventana_plaga4.title("Selececciones el tipo de plaga")
-    ventana_plaga4.geometry("380x250")
+    ventana_plaga4.geometry("380x250+480+200")
     ventana_plaga4.iconbitmap(r'images/descarga_gMJ_icon.ico ')
 
     Label(ventana_plaga4, text="Seleccione el tipo de pesticida: ", bg="LightGreen").pack()
@@ -177,7 +176,7 @@ def datos2(): #--------------------------------------------ventana de la calcula
     root.destroy()
     vent=Tk()
     vent.title('Calculadora Para Pesticida')
-    vent.geometry("500x350")
+    vent.geometry("500x350+480+200")
     vent.iconbitmap(r'images/descarga_gMJ_icon.ico ')
     vent.resizable(False, False)#-----------------Bloquear redimencion de la ventana
 
@@ -216,25 +215,27 @@ def comp(): #--------------------------------------------- ventana del proceso d
 
 def info():
     inf=Toplevel(root)
-    inf.geometry("230x110")
+    inf.geometry("220x110+480+200")
     inf.resizable(False, False)
     inf.title("Información")
+    inf.configure(bg="white")
     inf.iconbitmap(r'images/descarga_gMJ_icon.ico')
-    Label(inf,text=" ").pack()
+    Label(inf,bg="white",text=" ").pack()
 
-    Label(inf,text="Este software sigue en desarrollo y estará\ndisponible con un interfaz completa.\nCódigo en mi página de github: ").pack()
-    def callback(event):
-        webbrowser.open_new(event.widget.cget("@tomvargas"))
-    lbl = Label(inf, text=r"https://github.com/Tomvargas", fg="#2388e6", cursor="hand2").pack()
-    lbl.bind("<Button-1>", callback)
+    Label(inf,bg="white",justify="left",text="Este software sigue en desarrollo y estará\ndisponible con un interfaz completa.\nCódigo en mi página de github: ").pack()
+    HTMLLabel(inf,bg="white", html='<a style="color:#34404b" href="https://github.com/Tomvargas">@Tomvargas</a>').pack()
+    #def callback(event):
+    #    webbrowser.open_new(event.widget.cget("text"))
+    #lbl = Label(inf,bg="white", text=r"https://github.com/Tomvargas", fg="#2388e6", cursor="hand2").pack()
+    #lbl.bind("<Button-1>", callback)
 
 
 color="white"
-root=Tk()#iniciar ventana
-root.geometry("380x250")#DIMENSIONES DE LA VENTANA
+root=Tk()# iniciar ventana
+root.geometry("380x250+480+200")# DIMENSIONES DE LA VENTANA
 root.resizable(False, False)
-root.title("CALCULADORA DE PESTICIDA")#TITULO DE LA VENTANA
-root.iconbitmap(r'images/descarga_gMJ_icon.ico')#ATRIBUIR ICONO
+root.title("CALCULADORA DE PESTICIDA")# TITULO DE LA VENTANA
+root.iconbitmap(r'images/descarga_gMJ_icon.ico')# ATRIBUIR ICONO
 
 #==========================================================================================================================
 #.............................................. FONDE DE LA VENTANA .......................................................
@@ -254,7 +255,7 @@ root.iconbitmap(r'images/descarga_gMJ_icon.ico')#ATRIBUIR ICONO
 
 '''
 #==========================================================================================================================
-bg_image=PhotoImage(file= "BG.png")
+bg_image=PhotoImage(file= "images/BG.png")
 ttk.Label(root, image=bg_image).place(x=0, y=0, relwidth=1, relheight=1)
 #==========================================================================================================================
 #==========================================================================================================================
