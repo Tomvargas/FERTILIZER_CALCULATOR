@@ -56,13 +56,15 @@ def data(): #--------------------------------------------ventana de la calculado
     def comp(): #--------------------------------------------- ventana del proceso de los datos ingresados
         r.set(float(ab.get())/float(ds.get()))
 
-    vent=Tk()
+    vent=Toplevel(root)
+    bg_img=PhotoImage(file= "images/BG2.png")
+    Label(vent, image=bg_img).place(x=0, y=0, relwidth=1, relheight=1)
     vent.title('CALCULAR CANTIDAD DE PESTICIDA')
     vent.geometry("500x350+480+200")
     bgcolor="white"
-    vent.configure(background=bgcolor)
     vent.iconbitmap(r'images/descarga_gMJ_icon.ico ')
     vent.resizable(False, False)#-----------------Bloquear redimencion de la ventana
+
 
     ab=StringVar() #distancia de surcos
     ab.set(0)
@@ -71,26 +73,26 @@ def data(): #--------------------------------------------ventana de la calculado
         
 
     texto=("@Tomvargas")
-    Label(vent,text=texto,bg=bgcolor,fg='#34404b').place(x=300,y=10)
-    Label(vent,text="Medidor De Pesticida",bg=bgcolor, fg='#34404b', font = 'bold').place(x=20,y=9)
+    Label(vent,text=texto,bg='#b5e61d',fg=bgcolor,font = 'bold,35').place(x=330,y=30)
+    Label(vent,text="Medidor De Pesticida",bg='#b5e61d', fg=bgcolor, font = 'bold,30').place(x=20,y=9)
     n=80
 
-    Label(vent, text='Ingresar los valores actuales',bg=bgcolor,fg='#34404b').place(x=20,y=70)
+    Label(vent, text='Ingresar los valores actuales',bg='#739112',fg=bgcolor, font = 'bold').place(x=19,y=70)
 
-    Label(vent,text="Distancia de surco (ab)",bg=bgcolor,fg='#34404b').place(x=20 , y=20+n )
-    Entry(vent,textvariable=ab).place(x=20 , y=20*2+n )
+    Label(vent,text="Distancia de surco (ab)",bg=bgcolor,fg='#34404b').place(x=20 , y=35+n )
+    Entry(vent,textvariable=ab).place(x=20 , y=35*2+n )
 
-    Label(vent,text="Ancho de banda  (bs)",bg=bgcolor,fg='#34404b').place(x=20 , y=20*3+n )
-    Entry(vent,textvariable=ds).place(x=20 , y=20*4+n )
+    Label(vent,text="Ancho de banda  (bs)",bg=bgcolor,fg='#34404b').place(x=20 , y=35*3+n )
+    Entry(vent,textvariable=ds).place(x=20 , y=35*4+n )
 
     r=StringVar()#resultado(pesticida)
     r.set(0)
     
 
-    Label(vent,text="",bg=bgcolor).pack()
+    Label(vent,text="",bg='#b5e61d').pack()
     Button(vent,text="Calcular",bg=bgcolor,command=comp).place(x=20, y=20*11+n)
-    Label(vent,text="Resultado",bg=bgcolor).place(x=230, y=180)
-    Entry(vent,justify="center",textvariable=r,state="disabled").place(x=200, y=200)
+    Label(vent,text="Resultado",bg=bgcolor).place(x=230, y=155)
+    Entry(vent,justify="center",textvariable=r,state="disabled").place(x=230, y=180)
 
 
     vent.mainloop()
