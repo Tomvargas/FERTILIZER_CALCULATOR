@@ -6,8 +6,8 @@ Por medio de condiciones y un algoritmo básico se desarrolla esta interfaz de u
 
 ### Screenshots
 <div style="align:left">
-<img src="images/Screenshot_1.png"/>
-<img src="images/Screenshot_2.png"/>
+  <img src="images/Screenshot_2.png"/>
+  <img src="images/Screenshot_1.png"/>
 </div>
 
 
