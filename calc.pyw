@@ -118,7 +118,7 @@ def info():
     Label(inf,bg="white",text=" ").pack()
 
     Label(inf,bg="white",justify="left",text="Este software sigue en desarrollo y estará\ndisponible con un interfaz completa.\nCódigo en mi página de github: ").pack()
-    HTMLLabel(inf,bg="white", html='<a style="color:#34404b" href="https://github.com/Tomvargas">@Tomvargas</a>').pack()
+    HTMLLabel(inf,bg="white", html='<a style="color:#34404b" href="https://github.com/Tomvargas">@Tomvargas</a>').place(x=0,y=75)
 
 
 #==================================== VENTANA PRINCIPAL ================================================
