@@ -25,17 +25,22 @@ def tomates(): #--------------------------------------------- ventana para las p
 
 def pimientos(): #--------------------------------------------- venatana para las plagas del pimiento
     vpim = Toplevel(root)
+    bg="white"
+    btn="#93cc2e"
     vpim.title("PIMIENTO")
     vpim.geometry("130x200+480+200")
+    vpim.configure(bg=bg)
     vpim.iconbitmap(r'images/descarga_gMJ_icon.ico ')
 
-    Label(vpim, text="TIPO DE PLAGA").pack()
-    Label(vpim, text="").pack()
-    Button(vpim, text="plaga 1", width=10, height=1,command=op).pack()
-    Label(vpim, text="").pack()
-    Button(vpim, text="plaga 2", width=10, height=1,command=op).pack()
-    Label(vpim, text="").pack()
-    Button(vpim, text="plaga 3", width=10, height=1,command=op).pack()
+    
+    Label(vpim, text="TIPO DE PLAGA",bg=bg).pack()
+    Label(vpim, text="",bg=bg).pack()
+    Button(vpim, text="plaga 1", width=10, height=1,command=op,bg=btn,fg=bg).pack()
+    Label(vpim, text="",bg=bg).pack()
+    Button(vpim, text="plaga 2", width=10, height=1,command=op,bg=btn,fg=bg).pack()
+    Label(vpim, text="",bg=bg).pack()
+    Button(vpim, text="plaga 3", width=10, height=1,command=op,bg=btn,fg=bg).pack()
+    vpim.mainloop()
 
 def op(): #--------------------------------------------- ventana de pesticida
     plaga= Toplevel(root)
