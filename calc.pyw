@@ -82,7 +82,7 @@ def data(): #--------------------------------------------ventana de la calculado
     ds.set(0)
         
 
-    texto=("@Tomvargas")
+    texto=("CANTIDAD A USAR")
     Label(vent,text=texto,bg='#b5e61d',fg=bgcolor,font = 'bold,35').place(x=330,y=30)
     Label(vent,text="Medidor De Pesticida",bg='#b5e61d', fg=bgcolor, font = 'bold,30').place(x=20,y=9)
     n=80
