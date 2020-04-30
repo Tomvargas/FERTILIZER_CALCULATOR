@@ -6,18 +6,21 @@ import os
 def tomates(): #--------------------------------------------- ventana para las plagas del tomate
     vtom = Toplevel(root)
     vtom.title("TOMATE")
+    bg="white"
+    btn="#ee374e"
     vtom.geometry("130x200+480+200")
     vtom.resizable(False, False)
+    vtom.configure(bg=bg)
     vtom.iconbitmap(r'images/descarga_gMJ_icon.ico ')
 
-    Label(vtom, text="TIPO DE PLAGA").pack()
-    Label(vtom, text="").pack()
-    Button(vtom, text="plaga 1", width=10, height=1,command=op).pack()
-    Label(vtom, text="").pack()
-    Button(vtom, text="plaga 2", width=10, height=1,command=op).pack()
-    Label(vtom, text="").pack()
-    Button(vtom, text="plaga 3", width=10, height=1,command=op).pack()
-    Label(vtom, text="").pack()
+    Label(vtom, text="TIPO DE PLAGA",bg=bg).pack()
+    Label(vtom, text="",bg=bg).pack()
+    Button(vtom, text="plaga 1", width=10, height=1,command=op,bg=btn,fg=bg).pack()
+    Label(vtom, text="",bg=bg).pack()
+    Button(vtom, text="plaga 2", width=10, height=1,command=op,bg=btn,fg=bg).pack()
+    Label(vtom, text="",bg=bg).pack()
+    Button(vtom, text="plaga 3", width=10, height=1,command=op,bg=btn,fg=bg).pack()
+    Label(vtom, text="",bg=bg).pack()
     vtom.mainloop()
 
 def pimientos(): #--------------------------------------------- venatana para las plagas del pimiento
