@@ -44,18 +44,20 @@ def pimientos(): #--------------------------------------------- venatana para la
 
 def op(): #--------------------------------------------- ventana de pesticida
     plaga= Toplevel(root)
+    bg="white"
     plaga.title("PESTICIDA")
     plaga.geometry("180x250+480+200")
+    plaga.configure(bg=bg)
     plaga.iconbitmap(r'images/descarga_gMJ_icon.ico ')
 
-    Label(plaga, text="TIPO DE PESTICIDA").pack()
-    Label(plaga, text="").pack()
+    Label(plaga, text="TIPO DE PESTICIDA",bg=bg).pack()
+    Label(plaga, text="",bg=bg).pack()
     Button(plaga, text="pesticida 1", width=10, height=1,command=data).pack()
-    Label(plaga, text="").pack()
+    Label(plaga, text="",bg=bg).pack()
     Button(plaga, text="pesticida 2", width=10, height=1,command=data).pack()
-    Label(plaga, text="").pack()
+    Label(plaga, text="",bg=bg).pack()
     Button(plaga, text="pesticida 3", width=10, height=1,command=data).pack()
-    Label(plaga, text="").pack()
+    Label(plaga, text="",bg=bg).pack()
 
 #==================================== VENTANA CALCULAR ================================================
 
