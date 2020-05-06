@@ -89,11 +89,11 @@ def data(): #--------------------------------------------ventana de la calculado
 
     Label(vent, text='Ingresar los valores actuales',bg='#739112',fg=bgcolor, font = 'bold').place(x=19,y=70)
 
-    Label(vent,text="Distancia de surco (ab)",bg=bgcolor,fg='#34404b').place(x=20 , y=35+n )
-    Entry(vent,textvariable=ab).place(x=20 , y=35*2+n )
+    Label(vent,text="Distancia de surco (ab)",bg=bgcolor,fg='#34404b',font = 'bold,50').place(x=20 , y=35+n )
+    Entry(vent,textvariable=ab,font = 'bold,50').place(x=20 , y=35*2+n )
 
-    Label(vent,text="Ancho de banda  (bs)",bg=bgcolor,fg='#34404b').place(x=20 , y=35*3+n )
-    Entry(vent,textvariable=ds).place(x=20 , y=35*4+n )
+    Label(vent,text="Ancho de banda  (bs)",bg=bgcolor,fg='#34404b',font = 'bold,50').place(x=20 , y=35*3+n )
+    Entry(vent,textvariable=ds,font = 'bold,50').place(x=20 , y=35*4+n )
 
     r=StringVar()#resultado(pesticida)
     r.set(0)
@@ -101,8 +101,8 @@ def data(): #--------------------------------------------ventana de la calculado
 
     Label(vent,text="",bg='#b5e61d').pack()
     Button(vent,text="Calcular",bg=bgcolor,command=comp).place(x=20, y=20*11+n)
-    Label(vent,text="Resultado",bg=bgcolor).place(x=230, y=155)
-    Entry(vent,justify="center",textvariable=r,state="disabled").place(x=230, y=180)
+    Label(vent,text="Resultado",bg=bgcolor,font = 'bold,70').place(x=330, y=110)
+    Label(vent,justify="center",bg=bgcolor,textvariable=r,font = 'bold,150').place(x=330, y=140)
 
 
     vent.mainloop()
